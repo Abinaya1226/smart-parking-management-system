@@ -12,9 +12,11 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/auth")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {
+    "http://localhost:3000",
+    "https://smart-parking-management-system-iyoy.onrender.com"
+})
 public class AuthController {
-
     @Autowired
     private UserService userService;
 
